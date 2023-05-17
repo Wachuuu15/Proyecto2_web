@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { Board } from "./game/board";
+import { Board } from './game/board';
 import { Cell } from './game/cell';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Minesweeper';
-  board!: Board;
 
+export class AppComponent {
+  title = 'minesweeper';
+  board!: Board;
   constructor() {
     this.reset();
   }
@@ -20,16 +19,17 @@ export class AppComponent {
     if (result === 'gameover') {
       alert('You lose');
     } else if (result === 'win') {
-      alert('You win');
+      alert('you win');
     }
   }
 
   flag(cell: Cell) {
+    console.log(cell)
     if (cell.status === 'flag') {
       cell.status = 'open';
     } else {
       cell.status = 'flag';
-    }
+    } 
   }
 
   reset() {
