@@ -9,6 +9,8 @@ import { Cell } from './game/cell';
 
 export class AppComponent {
   title = 'minesweeper';
+  carita = "./../assets/carita.png"
+
   board!: Board;
   constructor() {
     this.reset();
@@ -17,9 +19,12 @@ export class AppComponent {
   checkCell(cell: Cell) {
     const result = this.board.checkCell(cell);
     if (result === 'gameover') {
-      alert('You lose');
+      // alert('You lose');
+      this.carita= "./../assets/triste.png"
+
     } else if (result === 'win') {
-      alert('you win');
+      // alert('you win');
+      this.carita = "./../assets/ganar.png"
     }
   }
 
@@ -34,5 +39,6 @@ export class AppComponent {
 
   reset() {
     this.board = new Board(20, 50);
+    this.carita = "./../assets/carita.png"
   }
 }

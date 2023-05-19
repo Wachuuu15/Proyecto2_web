@@ -21,8 +21,7 @@ export class Board {
       this.getRandomCell().mine = true;
     }
 
-    // Count mines
-
+    // contar minas
     for (let y = 0; y < size; y++) {
       for (let x = 0; x < size; x++) {
         let adjacentMines = 0;
@@ -60,7 +59,7 @@ export class Board {
     } else {
       cell.status = 'clear';
 
-      // Empty cell, let's clear the whole block.
+      // celda vacía
       if(cell.proximityMines === 0) {
         for(const peer of PEERS) {
           if (
@@ -72,13 +71,13 @@ export class Board {
         }
       }
 
-
       if (this.remainingCells-- <= 1) {
         return 'win';
       }
       return null;
     }
   }
+
   revealAll() {
     for (const row of this.cells) {
       for (const cell of row) {
