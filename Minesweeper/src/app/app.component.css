@@ -5,7 +5,7 @@ table,
     padding: 2px;
   }
   td {
-    width: 40px;;
+    width: 38.41px;
     height:40px;
 
     border-top: 2px solid white;
@@ -13,9 +13,27 @@ table,
     border-bottom: 2px solid #787878;
     border-right: 2px solid #787878;
 
+    padding: 0;
+
     align-items: center;
     justify-content: center;
   }
+
+.cuadros{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.numeros{
+  /* width: 20px;
+  height: 18.4px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .cuadradoAtras{
   height: fit-content;
@@ -80,12 +98,28 @@ table,
   background-color: #bebebe;
   /* background-image: "./imagenes/carita.png"; */
 
+  border-bottom: 3px solid #787878;
+  border-right: 3px solid #787878;
+
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+
   align-items: center;
   justify-content: center;
 
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
+}
+
+.cuadroCarita:hover{
+  background-color: #b2b2b2;
+  
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+
+  border-top: 3px solid #787878;
+  border-left: 3px solid #787878;
 }
 
 img{
