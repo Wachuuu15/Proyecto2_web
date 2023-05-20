@@ -4,6 +4,7 @@ table,
 
     padding: 2px;
   }
+
   td {
     width: 38.41px;
     height:40px;
@@ -17,6 +18,10 @@ table,
 
     align-items: center;
     justify-content: center;
+  }
+
+  td:hover{
+    background-color: #b2b2b2;
   }
 
 .cuadros{
@@ -33,6 +38,8 @@ table,
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: bold;
 }
 
 .cuadradoAtras{
@@ -114,7 +121,7 @@ table,
 
 .cuadroCarita:hover{
   background-color: #b2b2b2;
-  
+
   border-bottom: 3px solid white;
   border-right: 3px solid white;
 

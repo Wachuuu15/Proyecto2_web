@@ -41,4 +41,5 @@ export class AppComponent {
     this.board = new Board(20, 50);
     this.carita = "./../assets/carita.png"
   }
+
 }

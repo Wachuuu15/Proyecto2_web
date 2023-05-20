@@ -72,6 +72,7 @@ export class Board {
       }
 
       if (this.remainingCells-- <= 1) {
+        console.log("Juego ganado")
         return 'win';
       }
       return null;
