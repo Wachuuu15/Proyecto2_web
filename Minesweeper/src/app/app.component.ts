@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Board } from './game/board';
 import { Cell } from './game/cell';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

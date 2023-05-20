@@ -114,7 +114,7 @@
         <td *ngFor="let cell of row; index as x" (click)="checkCell(cell)" (contextmenu)="$event.preventDefault(); flag(cell)">
           <!-- <div>Status: {{ cell.status }}</div> -->
 
-          <div *ngIf="cell.status === 'clear' && !cell.mine">{{ cell.proximityMines }}</div>
+          <div *ngIf="cell.status === 'clear' && !cell.mine" class="numero_bonito">{{ cell.proximityMines }}</div>
 
           <div *ngIf="cell.status === 'flag'">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>flag</title>
