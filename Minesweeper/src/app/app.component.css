@@ -31,15 +31,84 @@ table,
   justify-content: center;
 }
 
-.numeros{
-  /* width: 20px;
-  height: 18.4px; */
-
+.one{
   display: flex;
   align-items: center;
   justify-content: center;
 
   font-weight: bold;
+
+  color: blue;
+}
+
+.two{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: green;
+}
+
+.three{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: red;
+}
+
+.four{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: purple;
+}
+
+.five{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: yellow;
+}
+
+.six{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: cyan;
+}
+
+.seven{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: grey;
+}
+
+.otro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: black;
 }
 
 .cuadradoAtras{
