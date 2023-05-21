@@ -131,6 +131,7 @@ table,
 
   padding: 20px;
   margin: 20px;
+  margin-right: 120px;
 }
 
 .cuadroMinas{
@@ -274,6 +275,61 @@ img{
   position: relative;
 }
 
-.numero_bonito{
-  color:red;
+.cuadroBotones{
+  height: fit-content;
+  width: fit-content;
+
+  background-color: #bebebe;
+
+  border-bottom: 4px solid #787878;
+  border-right: 4px solid #787878;
+
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 120px;
+}
+
+.contenedorGeneral{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+}
+
+.otrosBotones{
+  width: 46px;
+  height: 46px;
+
+  background-color: #bebebe;
+
+  border-bottom: 3px solid #787878;
+  border-right: 3px solid #787878;
+
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+}
+
+.otrosBotones:hover{
+  background-color: #b2b2b2;
+
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+
+  border-top: 3px solid #787878;
+  border-left: 3px solid #787878;
 }
