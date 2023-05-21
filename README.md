@@ -1,7 +1,7 @@
 # Proyecto 2 - Sistemas y tecnologías Web
  
 ## Contenidos
-- [Descripción](url)
+- [Descripción](https://github.com/Wachuuu15/Proyecto2_web#descripci%C3%B3n)
 - 
 
 ## Descripción
