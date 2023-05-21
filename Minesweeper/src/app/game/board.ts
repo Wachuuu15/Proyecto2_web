@@ -39,6 +39,36 @@ export class Board {
         if (this.cells[y][x].mine) {
           this.mineCount++;
         }
+        // Asignar el valor de colorClass
+        const cell = this.cells[y][x];
+        switch (cell.proximityMines) {
+          case 1:
+            cell.colorClass = 'one';
+            break;
+          case 2:
+            cell.colorClass = 'two';
+            break;
+          case 3:
+            cell.colorClass = 'three';
+            break;
+          case 4:
+            cell.colorClass = 'four';
+            break;
+          case 5:
+            cell.colorClass = 'five';
+            break;
+          case 6:
+            cell.colorClass = 'six';
+            break;
+          case 7:
+            cell.colorClass = 'seven';
+            break;
+            default:
+              cell.colorClass = 'otro';
+            break;
+        }
+        
+
       }
     }
     this.remainingCells = size * size - this.mineCount;
