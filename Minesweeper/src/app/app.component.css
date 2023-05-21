@@ -272,3 +272,7 @@ img{
   top: -5px;
   position: relative;
 }
+
+.numero_bonito{
+  color:red;
+}
