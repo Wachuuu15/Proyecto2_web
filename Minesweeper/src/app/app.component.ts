@@ -22,7 +22,6 @@ export class AppComponent {
     const result = this.board.checkCell(cell);
 
     if (result === 'gameover') {
-      // alert('You lose');
       this.carita= "./../assets/triste.png"
 
     } else if (result === 'win') {

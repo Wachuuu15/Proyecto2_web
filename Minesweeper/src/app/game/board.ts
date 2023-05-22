@@ -84,6 +84,7 @@ export class Board {
       return null;
     } else if (cell.mine) {
       this.revealAll();
+      //alert('Explotaste :( perdiste');
       return 'gameover';
     } else {
       cell.status = 'clear';
