@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Board } from './game/board';
 import { Cell } from './game/cell';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 
   board!: Board;
   constructor() {
-    this.reset();
+    this.onWindowResize();
   }
 
   checkCell(cell: Cell) {
@@ -39,9 +40,43 @@ export class AppComponent {
     } 
   }
 
-  reset() {
-    this.board = new Board(20, 50);
+  smallScreen(): boolean{
+    return window.innerWidth < 400 && window.innerHeight<850;
+  }
+
+  largeScreen(): boolean{
+    return window.innerWidth>= 400 && window.innerHeight>=850;
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(){
+    if(this.smallScreen())
+    {
+      this.board = new Board(10, 50);
+    }
+
+    else if(this.largeScreen())
+    {
+      this.board = new Board(20, 50);
+
+    }
+
     this.carita = "./../assets/carita.png"
   }
 
+  reset() {
+    if(window.innerWidth > 400 && window.innerHeight>850)
+    {
+      this.board = new Board(8, 50);
+    }
+
+    else
+    {
+      this.board = new Board(20, 50);
+
+    }
+
+    this.carita = "./../assets/carita.png"
+
+  }
 }

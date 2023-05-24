@@ -333,3 +333,52 @@ img{
   border-top: 3px solid #787878;
   border-left: 3px solid #787878;
 }
+
+@media screen and (max-width: 970px){ /* la pantalla es más pequeña que el cuadro de las minas*/
+  .contenedorGeneral{
+    flex-direction: column;
+  }
+
+  .cuadroBotones{
+    flex-direction: row;
+    gap: 5px;
+
+    margin-left: 10px;
+  }
+
+  .cuadradoAtras{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 400px){ /* pantalla IPhone 12 pro*/
+  .contenedorGeneral{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cuadroBotones{
+    flex-direction: row;
+    gap: 5px;
+
+    margin-left: 110px;
+  }
+
+  .cuadradoAtras{
+    margin: 10px;
+
+    padding: 7px;
+  }
+
+  .cuadroTiempo{
+    margin-left: 5px;
+    margin-right: 5px;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    justify-content: space-around;
+  }
+
+  .cuadritoTiempoyMinas{
+    margin: 5px;
+  }
+}
