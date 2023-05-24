@@ -67,7 +67,7 @@ export class AppComponent {
   reset() {
     if(window.innerWidth > 400 && window.innerHeight>850)
     {
-      this.board = new Board(8, 50);
+      this.board = new Board(10, 50);
     }
 
     else
