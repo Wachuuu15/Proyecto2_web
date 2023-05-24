@@ -8,10 +8,10 @@
    - [CSS](https://github.com/Wachuuu15/Proyecto2_web#-css)
    - [HTML](https://github.com/Wachuuu15/Proyecto2_web#-html)
 - [Comandos importantes](https://github.com/Wachuuu15/Proyecto2_web#comandos-importantes)
-   - [Preparación]
-   - [Compilación del proyecto]
+   - [Preparación](https://github.com/Wachuuu15/Proyecto2_web#preparaci%C3%B3n)
+   - [Compilación del proyecto](https://github.com/Wachuuu15/Proyecto2_web#compilaci%C3%B3n-del-proyecto)
 - [Estructura](https://github.com/Wachuuu15/Proyecto2_web#estructura)
-- [Soporte]
+- [Soporte](https://github.com/Wachuuu15/Proyecto2_web#soporte)
 - [Autores](https://github.com/Wachuuu15/Proyecto2_web#autores)
 
 ## Descripción
