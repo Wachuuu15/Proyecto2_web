@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthorsGirlsComponent } from './authors-girls/authors-girls.component';
 import { BoardComponent } from './board/board.component';
+import { PhotoComponent } from './photo/photo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/board', pathMatch: 'full' },
@@ -13,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, AuthorsGirlsComponent, BoardComponent],
+  declarations: [AppComponent, AuthorsGirlsComponent, BoardComponent, PhotoComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent]
