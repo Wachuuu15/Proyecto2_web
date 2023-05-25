@@ -44,13 +44,20 @@ body{
 }
 
 .contenedorGeneral{
-    width: 85%;
+    width: 90%;
     height: 85%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contenedorGeneral1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
 }
 
 .authors{
@@ -131,9 +138,7 @@ body{
     justify-content: flex-start;
   
     padding: 5px;
-    margin-top: 20px;
     margin-bottom: 20px;
-    
 }
 
 .otrosBotones{
@@ -174,39 +179,60 @@ img{
 }
 
 @media screen and (max-width: 1000px){ /*Pantalla IPhone 12*/
+    .contenedorGeneral1{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .contenedorGeneral{
+        width: 95%;
+        height: 100%;
+    }
+
+    .contenedorAutores2{
+        height: fit-content;
+        margin-top: 30px;
+    }
+    
     .contenedorAutores3{
         flex-direction: column;
         align-items: center;
     }
 
     .title{    
-        font-size: xxx-large;
+        font-size: xx-large;
+        margin-top: 30px;
     }
 
     .authors{
-        font-size: x-large;
+        font-size: medium;
     }
 
     .contact{
-        font-size: large;
+        font-size: small;
     }
 
     .email{
-        font-size: large;
+        font-size: small;
     }
 
     .contendeorContacto{
-        gap: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .otrosBotones{
-        width: 75px;
-        height: 75px;
+        width: 42px;
+        height: 42px;
     }
 
     .cuadroBotones{
-        gap: 10px;
-
-        padding: 10px;
+        gap: 7px;
+        padding: 8px;
+        margin-top: 40px;
     }
 }
