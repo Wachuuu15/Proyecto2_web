@@ -17,6 +17,8 @@ export class BoardComponent {
   board!: Board;
   flagMode = false; // Agrega una variable para rastrear el modo de bandera
   flagPhoto= "./../assets/numeroBandera.png";
+  difficulty= false; //Dificultad: alta
+  difficultyPhoto= "./../assets/estrella.png";
 
   constructor(private router: Router) {
     this.onWindowResize();
@@ -57,7 +59,6 @@ export class BoardComponent {
     }
   }
 
-
   @HostListener('window:resize')
   onWindowResize() {
     if (window.innerWidth < 400) {
@@ -67,6 +68,21 @@ export class BoardComponent {
     }
 
     this.carita = "./../assets/carita.png";
+  }
+
+  gameDifficulty(){
+    this.difficulty = !this.difficulty
+
+    if(this.difficulty) //Si dificultad baja (true)
+    {
+      this.board = new Board(10, 10);
+      this.difficultyPhoto= "./../assets/flecha.png";
+    }
+    else //dificultad alta (false)
+    {
+      this.board= new Board(20, 50);
+      this.difficultyPhoto= "./../assets/estrella.png";
+    }
   }
 
   reset() {
@@ -82,6 +98,4 @@ export class BoardComponent {
   redirectToAuthorsGirls() {
     this.router.navigate(['/authors-girls']);
   }
-
-  
 }
