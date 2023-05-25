@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/board', pathMatch: 'full' },
   { path: 'board', component: BoardComponent },
   { path: 'authors-girls', component: AuthorsGirlsComponent },
+  { path: 'photo', component: PhotoComponent },
 ];
 
 @NgModule({
