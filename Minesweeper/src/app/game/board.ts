@@ -84,14 +84,13 @@ export class Board {
       return null;
     } else if (cell.mine) {
       this.revealAll();
-      //alert('Explotaste :( perdiste');
       return 'gameover';
     } else {
       cell.status = 'clear';
-
+  
       // celda vacía
-      if(cell.proximityMines === 0) {
-        for(const peer of PEERS) {
+      if (cell.proximityMines === 0 || cell.proximityMines === null) { // Modificación aquí
+        for (const peer of PEERS) {
           if (
             this.cells[cell.row + peer[0]] &&
             this.cells[cell.row + peer[0]][cell.column + peer[1]]
@@ -100,7 +99,7 @@ export class Board {
           }
         }
       }
-
+  
       if (this.remainingCells-- <= 1) {
         console.log("Juego ganado")
         return 'win';
@@ -108,6 +107,7 @@ export class Board {
       return null;
     }
   }
+  
 
   revealAll() {
     for (const row of this.cells) {
