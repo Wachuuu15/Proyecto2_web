@@ -258,6 +258,37 @@ img{
   animation-iteration-count: infinite;
 }
 
+.numeroAbajo2{
+  width: 20px;
+
+  border-bottom: 8px solid red;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+
+  margin-top: -8px;
+
+  animation-name: titilar;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.numeroArriba2{
+  width: 20px;
+
+  border-top: 8px solid red;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+
+  margin-top: -10px;
+  animation-name: titilar;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
 .numeroVerticalIz{
   height: 12px;
 
@@ -287,6 +318,15 @@ img{
   width: 36px;
   display: flex;
   justify-content: space-between;
+  top: -5px;
+  position: relative;
+}
+
+.contenedorVerticalCinco{
+  height: fit-content;
+  width: 36px;
+  display: flex;
+  justify-content: flex-end;
   top: -5px;
   position: relative;
 }
