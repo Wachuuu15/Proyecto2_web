@@ -161,6 +161,46 @@ body{
     padding: 2px;
 }
 
+.otroBoton{
+    width: 37px;
+    height: 37px;
+  
+    background-color: #bebebe;
+  
+    border-bottom: 3px solid #787878;
+    border-right: 3px solid #787878;
+  
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+  
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
+.unBotonApachado{
+    width: 37px;
+    height: 37px;
+  
+    background-color: #b2b2b2;
+  
+    border-top: 3px solid #787878;
+    border-left: 3px solid #787878;
+  
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+  
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
 .otrosBotones:hover{
     background-color: #b2b2b2;
 
