@@ -98,4 +98,8 @@ export class BoardComponent {
   redirectToAuthorsGirls() {
     this.router.navigate(['/authors-girls']);
   }
+
+  redirectToPhoto() {
+    this.router.navigate(['/photo']);
+  }
 }
