@@ -32,6 +32,17 @@ body{
     height: fit-content;
 }
 
+.contenedorAutores3{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 15px;
+}
+
 .contenedorGeneral{
     width: 85%;
     height: 85%;
@@ -160,4 +171,42 @@ img{
     height: 90%;
   
     margin-top: 2px;
+}
+
+@media screen and (max-width: 1000px){ /*Pantalla IPhone 12*/
+    .contenedorAutores3{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title{    
+        font-size: xxx-large;
+    }
+
+    .authors{
+        font-size: x-large;
+    }
+
+    .contact{
+        font-size: large;
+    }
+
+    .email{
+        font-size: large;
+    }
+
+    .contendeorContacto{
+        gap: 30px;
+    }
+
+    .otrosBotones{
+        width: 75px;
+        height: 75px;
+    }
+
+    .cuadroBotones{
+        gap: 10px;
+
+        padding: 10px;
+    }
 }
