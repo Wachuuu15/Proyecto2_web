@@ -1,85 +1,17 @@
 import { Component } from '@angular/core';
-import { Board } from './game/board';
-import { Cell } from './game/cell';
-import { HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
   title = 'minesweeper';
-  carita = "./../assets/carita.png"
-  clase= "uno"
-  /* showMessage: boolean= false
-  buttons = ['button7', 'button2', 'button3'];
-  activeButton = '';
 
-  buttonMessages={
-    button7: 'Todo parece bien'
-  } */
+  constructor(private router: Router) {}
 
-  board!: Board;
-  constructor() {
-    this.onWindowResize();
+  redirectToAuthorsGirls() {
+    this.router.navigate(['/authors-girls']);
   }
-
-  checkCell(cell: Cell) {
-    const result = this.board.checkCell(cell);
-
-    if (result === 'gameover') {
-      this.carita= "./../assets/triste.png"
-
-    } else if (result === 'win') {
-      // alert('you win');
-      this.carita = "./../assets/ganar.png"
-    }
-  }
-
-  flag(cell: Cell) {
-    console.log(cell)
-    if (cell.status === 'flag') {
-      cell.status = 'open';
-    } else {
-      cell.status = 'flag';
-    } 
-  }
-
-  @HostListener('window:resize')
-  onWindowResize(){
-    if(window.innerWidth < 400)
-    {
-      this.board = new Board(8, 18);
-    }
-
-    else
-    {
-      this.board = new Board(20, 50);
-
-    }
-
-    this.carita = "./../assets/carita.png"
-  }
-
-  reset() {
-    if(window.innerWidth < 400)
-    {
-      this.board = new Board(8, 18);
-    }
-
-    else
-    {
-      this.board = new Board(20, 50);
-
-    }
-
-    this.carita = "./../assets/carita.png"
-  }
-
-  /* toggleMessage(button: string) {
-    this.activeButton = button;
-    this.showMessage = button !== '';
-  } */
 }
