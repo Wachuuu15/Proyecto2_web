@@ -13,6 +13,13 @@ export class AppComponent {
   title = 'minesweeper';
   carita = "./../assets/carita.png"
   clase= "uno"
+  /* showMessage: boolean= false
+  buttons = ['button7', 'button2', 'button3'];
+  activeButton = '';
+
+  buttonMessages={
+    button7: 'Todo parece bien'
+  } */
 
   board!: Board;
   constructor() {
@@ -40,34 +47,11 @@ export class AppComponent {
     } 
   }
 
-  smallScreen(): boolean{
-    return window.innerWidth < 400 && window.innerHeight<850;
-  }
-
-  largeScreen(): boolean{
-    return window.innerWidth>= 400 && window.innerHeight>=850;
-  }
-
   @HostListener('window:resize')
   onWindowResize(){
-    if(this.smallScreen())
+    if(window.innerWidth < 400)
     {
-      this.board = new Board(10, 20);
-    }
-
-    else if(this.largeScreen())
-    {
-      this.board = new Board(20, 50);
-
-    }
-
-    this.carita = "./../assets/carita.png"
-  }
-
-  reset() {
-    if(window.innerWidth > 400 && window.innerHeight>850)
-    {
-      this.board = new Board(10, 20);
+      this.board = new Board(8, 18);
     }
 
     else
@@ -78,4 +62,24 @@ export class AppComponent {
 
     this.carita = "./../assets/carita.png"
   }
+
+  reset() {
+    if(window.innerWidth < 400)
+    {
+      this.board = new Board(8, 18);
+    }
+
+    else
+    {
+      this.board = new Board(20, 50);
+
+    }
+
+    this.carita = "./../assets/carita.png"
+  }
+
+  /* toggleMessage(button: string) {
+    this.activeButton = button;
+    this.showMessage = button !== '';
+  } */
 }

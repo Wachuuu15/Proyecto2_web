@@ -26,11 +26,11 @@
       <img src="./../assets/interrogacion.png"/>
     </button>
     
-    <button class="otrosBotones">
+    <div class="otroBoton" >
       <img src="./../assets/cheque.png"/>
-    </button>
+    </div>
   </div>
-  
+
   <div class="cuadradoAtras">
     <div class="cuadroTiempo">
         <div class="cuadritoTiempoyMinas">
@@ -142,10 +142,10 @@
     </div>
   
     <div class="cuadroMinas">
-  <table [ngClass]="{'small-screen': smallScreen(), 'large-screen': largeScreen()}">
+
+  <table>
     <tr *ngFor="let row of board.cells; index as y">
       <td *ngFor="let cell of row; index as x" (click)="checkCell(cell)" (contextmenu)="$event.preventDefault(); flag(cell)">
-        <!-- <div>Status: {{ cell.status }}</div> -->
   
         <div *ngIf="cell.status === 'clear' && !cell.mine" [ngClass]="cell.colorClass">{{ cell.proximityMines }}</div>
   
@@ -167,7 +167,3 @@
 
   </div>
 </div>
-
-
-
-<!-- <button (click)="reset()">Restart</button> -->
