@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Board } from './game/board';
 import { Cell } from './game/cell';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,17 @@ export class AppComponent {
   title = 'minesweeper';
   carita = "./../assets/carita.png"
   clase= "uno"
+  /* showMessage: boolean= false
+  buttons = ['button7', 'button2', 'button3'];
+  activeButton = '';
+
+  buttonMessages={
+    button7: 'Todo parece bien'
+  } */
 
   board!: Board;
   constructor() {
-    this.reset();
+    this.onWindowResize();
   }
 
   checkCell(cell: Cell) {
@@ -39,9 +47,39 @@ export class AppComponent {
     } 
   }
 
-  reset() {
-    this.board = new Board(20, 50);
+  @HostListener('window:resize')
+  onWindowResize(){
+    if(window.innerWidth < 400)
+    {
+      this.board = new Board(8, 18);
+    }
+
+    else
+    {
+      this.board = new Board(20, 50);
+
+    }
+
     this.carita = "./../assets/carita.png"
   }
 
+  reset() {
+    if(window.innerWidth < 400)
+    {
+      this.board = new Board(8, 18);
+    }
+
+    else
+    {
+      this.board = new Board(20, 50);
+
+    }
+
+    this.carita = "./../assets/carita.png"
+  }
+
+  /* toggleMessage(button: string) {
+    this.activeButton = button;
+    this.showMessage = button !== '';
+  } */
 }
