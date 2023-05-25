@@ -7,6 +7,7 @@ export class Board {
 
   private remainingCells = 0;
   private mineCount = 0;
+  private flagMode = false;
 
   constructor(size: number, mines: number) {
     for (let y = 0; y < size; y++) {
@@ -64,8 +65,8 @@ export class Board {
           case 7:
             cell.colorClass = 'seven';
             break;
-            default:
-              cell.colorClass = 'otro';
+          default:
+            cell.colorClass = 'otro';
             break;
         }
       }
@@ -86,36 +87,43 @@ export class Board {
       this.revealAll();
       return 'gameover';
     } else {
-      cell.status = 'clear';
-  
-      // celda vacía
-      if (cell.proximityMines === 0 || cell.proximityMines === null) { // Modificación aquí
-        for (const peer of PEERS) {
-          if (
-            this.cells[cell.row + peer[0]] &&
-            this.cells[cell.row + peer[0]][cell.column + peer[1]]
-          ) {
-            this.checkCell(this.cells[cell.row + peer[0]][cell.column + peer[1]]);
+      if (this.flagMode) {
+        if (cell.status !== 'open') {
+          cell.status = 'open';
+        } else {
+          cell.status = 'flag';
+        }
+      } else {
+        cell.status = 'clear';
+
+        // celda vacía
+        if (cell.proximityMines === 0) {
+          for (const peer of PEERS) {
+            const adjacentCell = this.cells[cell.row + peer[0]]?.[cell.column + peer[1]];
+            if (adjacentCell && adjacentCell.status !== 'clear') {
+              this.checkCell(adjacentCell);
+            }
           }
         }
-      }
-  
-      if (this.remainingCells-- <= 1) {
-        console.log("Juego ganado")
-        return 'win';
+
+        if (this.remainingCells-- <= 1) {
+          console.log("Juego ganado");
+          return 'win';
+        }
       }
       return null;
     }
   }
-  
 
   revealAll() {
     for (const row of this.cells) {
       for (const cell of row) {
-        if (cell.status === 'open') {
+        if (cell.status === 'open' || cell.status === 'flag') {
           cell.status = 'clear';
         }
       }
     }
   }
+
+  
 }
