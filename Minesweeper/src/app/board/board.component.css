@@ -1,318 +1,226 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 table,
   td {
     border-collapse: separate;
-
     padding: 2px;
   }
-
   td {
     width: 38.41px;
     height:40px;
-
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-bottom: 2px solid #787878;
     border-right: 2px solid #787878;
-
     padding: 0;
-
     align-items: center;
     justify-content: center;
   }
-
   td:hover{
     background-color: #b2b2b2;
   }
-
 .cuadros{
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
-
 .one{
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
-
   color: blue;
 }
-
 .two{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: green;
 }
-
 .three{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: red;
 }
-
 .four{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: purple;
 }
-
 .five{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: yellow;
 }
-
 .six{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: cyan;
 }
-
 .seven{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: grey;
 }
-
 .otro{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Press Start 2P', cursive;
-
   color: black;
 }
-
 .cuadradoAtras{
   height: fit-content;
   width: fit-content;
-
   background-color: #bebebe;
-
   border-bottom: 4px solid #787878;
   border-right: 4px solid #787878;
-
   border-top: 4px solid white;
   border-left: 4px solid white;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
   margin: 20px;
   margin-right: 120px;
 }
-
 .cuadroMinas{
   width: 100%;
   height: fit-content;
-
   border-bottom: 4px solid white;
   border-right: 4px solid white;
-
   border-top: 4px solid #787878;
   border-left: 4px solid #787878;
-
   display: flex;
   justify-content: center;
-
 }
-
 .cuadroTiempo{
   width: 100%;
   height: fit-content;
-
   border-bottom: 4px solid white;
   border-right: 4px solid white;
-
   border-top: 4px solid #787878;
   border-left: 4px solid #787878;
-
   padding-top: 5px;
   padding-bottom: 5px;
-  
   margin-bottom: 20px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .cuadroCarita{
   width: 46px;
   height: 46px;
-
   background-color: #bebebe;
-  /* background-image: "./imagenes/carita.png"; */
-
   border-bottom: 3px solid #787878;
   border-right: 3px solid #787878;
-
   border-top: 3px solid white;
   border-left: 3px solid white;
-
   align-items: center;
   justify-content: center;
-
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
 }
-
 .cuadroCarita:hover{
   background-color: #b2b2b2;
-
   border-bottom: 3px solid white;
   border-right: 3px solid white;
-
   border-top: 3px solid #787878;
   border-left: 3px solid #787878;
 }
-
 img{
   max-width: auto;
   height: 90%;
-
   margin-top: 2px;
 }
-
 .cuadritoTiempoyMinas{
   background-color: black;
-
   width: fit-content;
-
   margin-left: 15px;
   margin-right: 15px;
-
   padding: 6px;
-
   display: flex;
   justify-content: space-around;
   gap: 5px;
 }
-
 .numero{
   height: 100%;
   width: fit-content;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
-
 .numeroArriba{
   width: 20px;
-
   border-top: 8px solid red;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 .numeroAbajo{
   width: 20px;
-
   border-bottom: 8px solid red;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-
   margin-top: -10px;
-
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 .numeroAbajo2{
   width: 20px;
-
   border-bottom: 8px solid red;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-
   margin-top: -8px;
-
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
-
 .numeroArriba2{
   width: 20px;
-
   border-top: 8px solid red;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-
   margin-top: -10px;
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
-
 .numeroVerticalIz{
   height: 12px;
-
   border-left: 8px solid red;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 .numeroVerticalDer{
   height: 12px;
-
   border-right: 8px solid red;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-
   animation-name: titilar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 .contenedorVerticales{
   height: fit-content;
   width: 36px;
@@ -321,7 +229,6 @@ img{
   top: -5px;
   position: relative;
 }
-
 .contenedorVerticalCinco{
   height: fit-content;
   width: 36px;
@@ -330,174 +237,114 @@ img{
   top: -5px;
   position: relative;
 }
-
 .cuadroBotones{
   height: fit-content;
   width: fit-content;
-
   background-color: #bebebe;
-
   border-bottom: 4px solid #787878;
   border-right: 4px solid #787878;
-
   border-top: 4px solid white;
   border-left: 4px solid white;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 5px;
   margin-top: 20px;
   margin-right: 100px;
   margin-left: 80px;
 }
-
 .contenedorGeneral{
   height: 100%;
   width: 100%;
-
   display: flex;
 }
-
 .otrosBotones{
   width: 46px;
   height: 46px;
-
   background-color: #bebebe;
-
   border-bottom: 3px solid #787878;
   border-right: 3px solid #787878;
-
   border-top: 3px solid white;
   border-left: 3px solid white;
-
   align-items: center;
   justify-content: center;
-
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
 }
-
 .otroBoton{
   width: 37px;
   height: 37px;
-
   background-color: #bebebe;
-
   border-bottom: 3px solid #787878;
   border-right: 3px solid #787878;
-
   border-top: 3px solid white;
   border-left: 3px solid white;
-
   align-items: center;
   justify-content: center;
-
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
 }
-
 .unBotonApachado{
   width: 37px;
   height: 37px;
-
   background-color: #b2b2b2;
-
   border-top: 3px solid #787878;
   border-left: 3px solid #787878;
-
   border-right: 3px solid white;
   border-bottom: 3px solid white;
-
   align-items: center;
   justify-content: center;
-
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
 }
-
 .otrosBotones:hover{
   background-color: #b2b2b2;
-
   border-bottom: 3px solid white;
   border-right: 3px solid white;
-
   border-top: 3px solid #787878;
   border-left: 3px solid #787878;
 }
-
 @media screen and (max-width: 970px){ /* la pantalla es más pequeña que el cuadro de las minas*/
   .contenedorGeneral{
     flex-direction: column;
   }
-
   .cuadroBotones{
     flex-direction: row;
     gap: 5px;
-
     margin: 0px;
   }
-
   .cuadradoAtras{
     margin: 10px;
   }
 }
-
 @media screen and (max-width: 500px){ /* pantalla IPhone 12 pro*/
   .contenedorGeneral{
     flex-direction: column;
     align-items: center;
   }
-
   .cuadroBotones{
     flex-direction: row;
     gap: 5px;
-
   }
-
   .cuadradoAtras{
     margin: 10px;
-
     padding: 7px;
   }
-
   .cuadroTiempo{
     margin-left: 5px;
     margin-right: 5px;
-    /* padding-left: 5px; */
-    /* padding-right: 5px; */
     justify-content: space-around;
   }
-
   .cuadritoTiempoyMinas{
     margin: 5px;
   }
 }
-
 @keyframes titilar {
   0% { opacity: 1; }
   50% { opacity: 0.5; }
   100% { opacity: 1; }
-}
-
-.mensajePop{
-  height: fit-content;
-  width: fit-content;
-
-  padding-left: 5px;
-  padding-right: 5px;
-
-  background-color: #ffffc0;
-
-  border-radius: 5px;
-  border: 1px solid black;
-
-  position: absolute;
-
-  margin-left: 76px;
 }
