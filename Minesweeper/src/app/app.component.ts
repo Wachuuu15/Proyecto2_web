@@ -14,4 +14,8 @@ export class AppComponent {
   redirectToAuthorsGirls() {
     this.router.navigate(['/authors-girls']);
   }
+
+  redirecToBoard(){
+    this.router.navigate(['/board']);
+  }
 }

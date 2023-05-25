@@ -14,18 +14,24 @@ export class BoardComponent {
   carita = "./../assets/carita.png";
   clase = "uno";
   board!: Board;
+  flagMode = false; // Agrega una variable para rastrear el modo de bandera
 
   constructor(private router: Router) {
     this.onWindowResize();
   }
 
   checkCell(cell: Cell) {
-    const result = this.board.checkCell(cell);
+    // Verifica si está en el modo de bandera y realiza acciones según el modo
+    if (this.flagMode) {
+      this.flag(cell);
+    } else {
+      const result = this.board.checkCell(cell);
 
-    if (result === 'gameover') {
-      this.carita = "./../assets/triste.png";
-    } else if (result === 'win') {
-      this.carita = "./../assets/ganar.png";
+      if (result === 'gameover') {
+        this.carita = "./../assets/triste.png";
+      } else if (result === 'win') {
+        this.carita = "./../assets/ganar.png";
+      }
     }
   }
 
@@ -36,6 +42,11 @@ export class BoardComponent {
       cell.status = 'flag';
     }
   }
+
+  toggleFlagMode() {
+    this.flagMode = !this.flagMode;
+  }
+
 
   @HostListener('window:resize')
   onWindowResize() {
@@ -61,4 +72,6 @@ export class BoardComponent {
   redirectToAuthorsGirls() {
     this.router.navigate(['/authors-girls']);
   }
+
+  
 }
