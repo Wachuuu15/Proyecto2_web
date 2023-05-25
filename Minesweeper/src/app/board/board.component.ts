@@ -9,12 +9,14 @@ import { Cell } from '../game/cell';
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.css']
 })
+
 export class BoardComponent {
   title = 'minesweeper';
   carita = "./../assets/carita.png";
   clase = "uno";
   board!: Board;
   flagMode = false; // Agrega una variable para rastrear el modo de bandera
+  flagPhoto= "./../assets/numeroBandera.png";
 
   constructor(private router: Router) {
     this.onWindowResize();
@@ -24,6 +26,7 @@ export class BoardComponent {
     // Verifica si está en el modo de bandera y realiza acciones según el modo
     if (this.flagMode) {
       this.flag(cell);
+
     } else {
       const result = this.board.checkCell(cell);
 
@@ -45,6 +48,13 @@ export class BoardComponent {
 
   toggleFlagMode() {
     this.flagMode = !this.flagMode;
+
+    if(this.flagPhoto === "./../assets/banderaNumero.png"){
+      this.flagPhoto= "./../assets/numeroBandera.png";
+    }
+    else{
+      this.flagPhoto= "./../assets/banderaNumero.png";
+    }
   }
 
 
