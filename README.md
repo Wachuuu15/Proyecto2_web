@@ -11,8 +11,8 @@
    - [Preparación](https://github.com/Wachuuu15/Proyecto2_web#preparaci%C3%B3n)
    - [Compilación del proyecto](https://github.com/Wachuuu15/Proyecto2_web#compilaci%C3%B3n-del-proyecto)
 - [Estructura](https://github.com/Wachuuu15/Proyecto2_web#estructura)
-- [Juego en servidor](url)
-- [Manual de usuario](url)
+- [Juego en servidor](https://github.com/Wachuuu15/Proyecto2_web#juego-en-servidor)
+- [Manual de usuario](https://github.com/Wachuuu15/Proyecto2_web#manual-de-usuario)
 - [Soporte](https://github.com/Wachuuu15/Proyecto2_web#soporte)
 - [Autores](https://github.com/Wachuuu15/Proyecto2_web#autores)
 
