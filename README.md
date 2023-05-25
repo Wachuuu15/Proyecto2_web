@@ -11,6 +11,8 @@
    - [Preparación](https://github.com/Wachuuu15/Proyecto2_web#preparaci%C3%B3n)
    - [Compilación del proyecto](https://github.com/Wachuuu15/Proyecto2_web#compilaci%C3%B3n-del-proyecto)
 - [Estructura](https://github.com/Wachuuu15/Proyecto2_web#estructura)
+- [Juego en servidor](url)
+- [Manual de usuario](url)
 - [Soporte](https://github.com/Wachuuu15/Proyecto2_web#soporte)
 - [Autores](https://github.com/Wachuuu15/Proyecto2_web#autores)
 
@@ -77,21 +79,43 @@ ng serve
 ## Estructura
 
 ### src
-- App
+- app
+  - authors-girls
+    - authors-girls.component.css
+    - authors-girls.component.html
+    - authors-girls.component.spec.ts
+    - authors-girls.component.ts
+  - board
+    - board.component.css
+    - board.component.spec.ts
+    - board.component.ts
   - game
     - board.ts
     - cell.ts
+  - photo
+    - photo.component.css
+    - photo.component.html
+    - photo.component.spec.ts
+    - photo.component.ts
   - app.comenent.css
   - app.comenent.html
   - app.comenent.ts
   - app.comenent.spec.ts
   - app.module.ts
-- Assets
+
+- assets
 
   Aquí se encuentran todos los archivos .png que se utilizan en el proyecto
 - index.html
 - main.ts
 - styles.css
+
+
+## Juego en servidor
+Para acceder al juego en línea haz click [Aquí](https://minesweeper-824cd.web.app)
+
+## Manual de usuario
+Para acceder al manual de usuario haz click [Aquí](https://docs.google.com/document/d/1ISm6zjf7h1rNE57-bgc2l2JACaUzgubJOGXbRRj5D_0/edit?usp=sharing)
 
 ## Soporte
 Para cualquier duda relacionada con el malfuncionamiento de uno o más archivos del proyecto por favor comunicarse con las creadoras a los correos:
